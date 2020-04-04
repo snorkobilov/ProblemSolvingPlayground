@@ -13,6 +13,7 @@ deploy/
 
 .idea/
 *.iml
+*.properties
 
 .classpath
 .project

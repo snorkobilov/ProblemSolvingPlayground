@@ -1,14 +1,13 @@
 public class ReverseInteger {
 
-    public static int reverseInteger(int number){
-        int lastNumber = 0;
-        int givenNumber = number;
+    public static int reverseInteger(int x) {
         int reversedNumber = 0;
-
-        while(givenNumber > 0){
-            lastNumber = givenNumber%10;
-            givenNumber = givenNumber/10;
-            reversedNumber = lastNumber*10;
+        while (x != 0) {
+            reversedNumber = reversedNumber * 10 + x % 10;
+            x = x / 10;
+            if (reversedNumber > Integer.MAX_VALUE || reversedNumber < Integer.MIN_VALUE) {
+                return 0;
+            }
         }
         return reversedNumber;
     }
