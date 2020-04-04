@@ -1,5 +1,6 @@
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MovingStonesTest {
     final int[] expected12Result = new int[]{1, 2};
@@ -34,6 +35,6 @@ public class MovingStonesTest {
     }
 
     private void verifyArraysEquals(int[] firstArray, int[] secondArray) {
-        Assert.assertArrayEquals(firstArray, secondArray);
+        assertArrayEquals(firstArray, secondArray);
     }
 }

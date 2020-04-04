@@ -1,10 +1,11 @@
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReverseStringRecursiveTest {
 
@@ -13,13 +14,13 @@ public class ReverseStringRecursiveTest {
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
 
-    @Before
+    @BeforeEach
     public void setUpStreams() {
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
 
-    @After
+    @AfterEach
     public void restoreStreams() {
         System.setOut(originalOut);
         System.setErr(originalErr);
@@ -29,19 +30,19 @@ public class ReverseStringRecursiveTest {
     public void shouldPrintReverseString(){
         var givenString = "hello";
         ReverseStringRecursive.reverseString(givenString);
-        Assert.assertEquals("olleh", outContent.toString());
+        assertEquals("olleh", outContent.toString());
     }
 
     @Test
     public void shouldNotReverseWhenEmpty(){
         var givenString = "";
         ReverseStringRecursive.reverseString(givenString);
-        Assert.assertEquals(0, outContent.toString().length());
+        assertEquals(0, outContent.toString().length());
     }
 
     @Test
     public void shouldHandleNull(){
         ReverseStringRecursive.reverseString(null);
-        Assert.assertEquals(0, outContent.toString().length());
+        assertEquals(0, outContent.toString().length());
     }
 }
