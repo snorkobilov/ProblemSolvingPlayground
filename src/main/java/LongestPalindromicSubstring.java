@@ -2,16 +2,20 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class LongestPalindromicSubstring {
-    /*
-    Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1:
-Input: "babad"
-Output: "bab"
-Note: "aba" is also a valid answer.
-
-Example 2:
-Input: "cbbd"
-Output: "bb"
+    /**
+     * Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s
+     * is 1000.
+     * Example 1:
+     * Input: "babad"
+     * Output: "bab"
+     * Note: "aba" is also a valid answer.
+     * <p>
+     * Example 2:
+     * Input: "cbbd"
+     * Output: "bb"
+     *
+     * @param s
+     * @return
      */
 
     public static String longestPalindrome(String s) {
@@ -20,7 +24,7 @@ Output: "bb"
             throw new IllegalArgumentException("please provide valid string");
         }
 
-        if(s.length() == 1){
+        if (s.length() == 1) {
             return s;
         }
 
@@ -42,7 +46,7 @@ Output: "bb"
     }
 
     private static boolean isPalindrome(String palindromeString) {
-        if(palindromeString.length() == 1){
+        if (palindromeString.length() == 1) {
             return false;
         }
         char[] chars = palindromeString.toCharArray();

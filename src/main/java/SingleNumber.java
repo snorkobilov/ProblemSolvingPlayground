@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class SingleNumber {
 
-    /*
-    Given a non-empty array of integers, every element appears twice except for one. Find that single one.
-    Input: [2,2,1]
-Output: 1
+    /**
+     * Given a non-empty array of integers, every element appears twice except for one. Find that single one.
+     * Input: [2,2,1]
+     * Output: 1
      */
 
     public static int getSingleNumber(int[] nums) {
