@@ -28,7 +28,6 @@ class RotateArrayTest {
     @Test
     void rotate() {
         int[] input = new int[]{1, 2, 3, 4, 5, 6, 7};
-        int[] output = new int[]{5, 6, 7, 1, 2, 3, 4};
         RotateArray.rotate(input, 3);
         assertEquals("5671234", outContent.toString());
     }
