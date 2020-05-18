@@ -5,6 +5,18 @@ package design_patterns_course.command;
  */
 public class Light {
     private boolean isOn = false;
+    private String location;
+
+    public Light(){
+
+    }
+
+    public Light(String location){
+        this.location = location;
+    }
+    public boolean isOn() {
+        return isOn;
+    }
 
     public void toggle() {
         if (isOn) {
@@ -17,10 +29,10 @@ public class Light {
     }
 
     public void on() {
-        System.out.println("Light switched on");
+        System.out.println("Light switched on: "+location);
     }
 
     public void off() {
-        System.out.println("Light switched off");
+        System.out.println("Light switched off: "+location);
     }
 }
