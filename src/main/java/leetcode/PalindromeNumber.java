@@ -1,8 +1,5 @@
 package leetcode;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-
 public class PalindromeNumber {
 
     /**
@@ -20,7 +17,6 @@ public class PalindromeNumber {
         if (x < 0) {
             return false;
         }
-
         int number = x;
 
         int reversedNum = 0;
@@ -31,5 +27,4 @@ public class PalindromeNumber {
 
         return reversedNum == x;
     }
-
 }
