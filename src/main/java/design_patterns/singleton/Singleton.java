@@ -3,7 +3,6 @@ package design_patterns.singleton;
 public class Singleton {
     private static Singleton instance = null;
 
-
     private Singleton() {
     }
 

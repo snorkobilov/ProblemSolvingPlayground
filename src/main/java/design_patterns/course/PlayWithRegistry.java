@@ -7,8 +7,6 @@ import design_patterns.course.models.Rectangle;
 public class PlayWithRegistry {
 
     public static void main(String[] args) {
-
-
         Consumer<Builder<Rectangle>> consumer = builder -> builder.register("rectangle", Rectangle::new);
     }
 }

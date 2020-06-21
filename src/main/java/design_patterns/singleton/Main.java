@@ -14,8 +14,7 @@ public class Main {
         System.out.println(thirdInstance);
 
         Map<Integer, Integer> myMap = new HashMap<>();
-        myMap.put(1,1);
-        myMap.put(1,1);
+        myMap.put(1, 1);
 
         System.out.println(myMap.get(4));
 

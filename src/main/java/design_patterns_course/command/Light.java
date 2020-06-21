@@ -7,13 +7,14 @@ public class Light {
     private boolean isOn = false;
     private String location;
 
-    public Light(){
+    public Light() {
 
     }
 
-    public Light(String location){
+    public Light(String location) {
         this.location = location;
     }
+
     public boolean isOn() {
         return isOn;
     }
@@ -29,10 +30,10 @@ public class Light {
     }
 
     public void on() {
-        System.out.println("Light switched on: "+location);
+        System.out.println("Light switched on: " + location);
     }
 
     public void off() {
-        System.out.println("Light switched off: "+location);
+        System.out.println("Light switched off: " + location);
     }
 }

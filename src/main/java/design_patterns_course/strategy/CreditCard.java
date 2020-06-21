@@ -6,12 +6,11 @@ public class CreditCard {
     private String cvv;
     private final ValidationStrategy strategy;
 
-
     public CreditCard(ValidationStrategy strategy) {
         this.strategy = strategy;
     }
 
-    public boolean isValid(){
+    public boolean isValid() {
         return strategy.isValid(this);
     }
 

@@ -24,6 +24,5 @@ public class SingletonDemo {
         Connection connection2 = singleton.getConnection();
         afterTime = System.currentTimeMillis();
         System.out.println(afterTime-beforeTime);
-
     }
 }

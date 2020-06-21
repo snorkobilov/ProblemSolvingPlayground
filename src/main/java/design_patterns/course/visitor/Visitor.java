@@ -10,7 +10,7 @@ public interface Visitor<R> {
     R visit(Object o);
 
     static <R> Visitor<R> of(Consumer<VisitorBuilder<R>> consumer) {
-        Map<Class<?>, Function<Object,R>> registry = new HashMap<>();
+        Map<Class<?>, Function<Object, R>> registry = new HashMap<>();
         VisitorBuilder<R> visitorBuilder = new VisitorBuilder<R>() {
             @Override
             public void register(Class type, Function function) {
