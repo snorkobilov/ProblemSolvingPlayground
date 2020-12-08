@@ -1,6 +1,6 @@
 package design_patterns_course.singleton;
 
-import org.apache.derby.jdbc.EmbeddedDriver;
+//import org.apache.derby.jdbc.EmbeddedDriver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,11 +11,11 @@ public class DbSingleton {
     private static volatile Connection connection = null;
 
     private DbSingleton() {
-        try {
-            DriverManager.registerDriver(new EmbeddedDriver());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            DriverManager.registerDriver(new EmbeddedDriver());
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 
         if (connection != null) {
             throw new RuntimeException("Use get connection method");
