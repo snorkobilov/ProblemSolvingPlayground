@@ -27,9 +27,9 @@ public class ContainerWithMostWater {
         return maxArea;
     }
 
-    public static int sample(int[] height){
+    public static int maxAreaWithForLoop(int[] height) {
         int maxVal = 0;
-        for(int i = 0, j = height.length -1; i<j;){
+        for (int i = 0, j = height.length - 1; i < j; ) {
             maxVal = Math.max(maxVal, Math.min(height[i], height[j]) * (j - i));
             if (height[i] < height[j]) {
                 i++;
