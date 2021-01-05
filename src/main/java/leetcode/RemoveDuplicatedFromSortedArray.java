@@ -1,6 +1,7 @@
 package leetcode;
 
-import java.util.HashSet;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class RemoveDuplicatedFromSortedArray {
 
@@ -23,12 +24,6 @@ public class RemoveDuplicatedFromSortedArray {
      * @return
      */
     public int removeDuplicates(int[] nums) {
-
-        var uniqueList = new HashSet<Integer>();
-        for (int i = 0; i < nums.length; i++) {
-
-            uniqueList.add(nums[i]);
-        }
-        return uniqueList.size();
+        return Stream.of(nums).collect(Collectors.toSet()).size();
     }
 }
