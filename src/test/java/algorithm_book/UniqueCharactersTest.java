@@ -49,4 +49,16 @@ class UniqueCharactersTest {
         boolean inname = uniqueCharacters.isUniqueWithArrays("Uniqe");
         assertTrue(inname);
     }
+
+    @Test
+    public void isUniqueWithVectorReturnsFalse(){
+        boolean inname = uniqueCharacters.isUniqueWithVector("Innama");
+        assertFalse(inname);
+    }
+
+    @Test
+    public void isUniqueWithVectorReturnsTrue(){
+        boolean inname = uniqueCharacters.isUniqueWithVector("Uniqe");
+        assertTrue(inname);
+    }
 }

@@ -14,6 +14,21 @@ public class UniqueCharacters {
         return s.length() == set.size();
     }
 
+    public boolean isUniqueWithVector(String s){
+        int checker = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            int val = s.charAt(i) - 'a';
+
+            if((checker & (1<<val)) > 0){
+                return false;
+            }
+
+            checker |= (1<<val);
+        }
+        return true;
+    }
+
     public boolean isUniqueWithArrays(String str) {
 
         boolean[] uniqueCharsArray = new boolean[128];
