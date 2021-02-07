@@ -33,4 +33,11 @@ class StringCompressionTest {
         String compressedString = stringCompression.compressString(input);
         assertEquals("a2b2c3d4e6a1", compressedString);
     }
+
+    @Test
+    void stringCompression4(){
+        String input =  "abbcccddddeeeeeea";
+        String compressedString = stringCompression.compressString(input);
+        assertEquals("a1b2c3d4e6a1", compressedString);
+    }
 }
