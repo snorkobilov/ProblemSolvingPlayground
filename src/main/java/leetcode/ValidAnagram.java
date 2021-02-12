@@ -17,12 +17,12 @@ public class ValidAnagram {
 
         for (int i = 0; i < s.length(); i++) {
             int i1 = getCharInt(s, i);
-            letters[i1] ++;
+            letters[i1]++;
         }
 
         for (int i = 0; i < t.length(); i++) {
             int tInt = getCharInt(t, i);
-            letters[tInt] --;
+            letters[tInt]--;
         }
 
         return Arrays.stream(letters).allMatch(c -> c == 0);
