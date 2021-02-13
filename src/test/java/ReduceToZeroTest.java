@@ -8,6 +8,7 @@ class ReduceToZeroTest {
     void numberOfSteps() {
         int input = 14;
         assertEquals(6, ReduceToZero.numberOfSteps(input));
+
     }
 
     @Test
