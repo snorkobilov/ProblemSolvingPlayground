@@ -88,6 +88,4 @@ public class TwoSum {
 
         throw new RuntimeException("Not found");
     }
-
-
 }

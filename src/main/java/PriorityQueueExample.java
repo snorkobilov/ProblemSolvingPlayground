@@ -16,10 +16,10 @@ public class PriorityQueueExample {
         priorityQueue.add(new Employee(9L, "AAdx", LocalDateTime.now()));
 
         var id = 0;
-        while (id<3){
+        while (id < 3) {
             var employee = priorityQueue.poll();
             System.out.println(employee);
-            if(employee == null)break;
+            if (employee == null) break;
             id++;
         }
     }

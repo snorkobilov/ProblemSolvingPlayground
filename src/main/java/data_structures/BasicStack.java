@@ -20,18 +20,18 @@ public class BasicStack<X> {
         return data[--stackPointer];
     }
 
-    public boolean contains(X item){
-        for(X singleItem: data){
-            if(singleItem.equals(item)){
+    public boolean contains(X item) {
+        for (X singleItem : data) {
+            if (singleItem.equals(item)) {
                 return true;
             }
         }
         return false;
     }
 
-    public X access(X item){
-        for(X singleItem: data){
-            if(singleItem.equals(item)){
+    public X access(X item) {
+        for (X singleItem : data) {
+            if (singleItem.equals(item)) {
                 return singleItem;
             }
         }

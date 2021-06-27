@@ -3,13 +3,13 @@ package data_structures;
 public class DepthFirstSearch {
     Node<Integer> root;
 
-    void printPreOrder(){
+    void printPreOrder() {
         preOrder(root);
     }
 
-    void preOrder(Node<Integer> root){
-        if(root != null){
-            System.out.print(root.value+" ");
+    void preOrder(Node<Integer> root) {
+        if (root != null) {
+            System.out.print(root.value + " ");
             preOrder(root.left);
             preOrder(root.right);
         }
